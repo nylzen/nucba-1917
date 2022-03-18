@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Link a la docu del html semantico 
+      https://developer.mozilla.org/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure -->
+
+    <!-- Etiqueta -->
+    <header>
+      <h1>Nucba</h1>
+      <!-- etiqueta de navegacion -->
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Nostros</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Con main definimos el contenido principal, aca tenemos la parte central de nuestra web donde mostramos la mayor parte del contenido -->
+    <main>
+      <!-- definimos una seccion -->
+      <section>
+        <!-- creamos un articulo dentro de nuestra seccion -->
+        <article>
+          <h2>Seccion 1</h2>
+          <h3>Hola soy el titulo de mi article</h3>
+          <img
+            src="https://res.cloudinary.com/practicaldev/image/fetch/s--L4Hsw09V--/c_imagga_scale,f_auto,fl_progressive,h_420,q_uto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/39ptdo6qxcy7wawp5wz8.png"
+            alt="se rompio la img"
+          />
+          <p>Hola soy el parrafo del articulo</p>
+          <a href="#">Hola soy el link del articulo</a>
+        </article>
+        <article>
+          <h2>Hola soy el titulo de mi article</h2>
+          <img
+            src="https://res.cloudinary.com/practicaldev/image/fetch/s--L4Hsw09V--/c_imagga_scale,f_auto,fl_progressive,h_420,q_uto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/39ptdo6qxcy7wawp5wz8.png"
+            alt="se rompio la img"
+          />
+          <p>Hola soy el parrafo del articulo</p>
+          <a href="#">Hola soy el link del articulo</a>
+          <aside>
+            <p>TExto dentro del aside</p>
+          </aside>
+        </article>
+      </section>
+      <section>
+        <h2>Seccion 2</h2>
+        <p>Hola soy el parrafo del articulo 2</p>
+        <a href="#">Hola soy el link del articulo 2</a>
+        <aside>
+          <p>TExto dentro del aside</p>
+        </aside>
+        <br />
+      </section>
+
+      <!--  -->
+      <!-- Importante aca, el aside puede ir dentro del main -->
+      <!--  -->
+      <aside>
+        <p>TExto dentro del aside</p>
+      </aside>
+
+      <!-- Formularios (Lo vamos a ver en profundidad despues, quedense tranqui) -->
+
+      <!-- Con la etiqueta form definimos el contenedor para los controles del formulario -->
+      <form action="">
+        <!-- Con la etiqueta label podemos darle un titulo a nuestro input-->
+
+        <label for="nombre">Nombre</label>
+        <!-- Con la etiqueta input definimos que permitimos el ingreso de una linea de texto, en este caso lo usamos para crear un input para escribir un nombre -->
+
+        <!-- Tambien usamos el atributo placeholder. Lo que hacemos con esto es la de darle el titulo dentro del mismo input -->
+        <input type="text" name="nombre" id="name" placeholder="Nombre..." />
+        <br />
+        <label for="email"
+          >Email
+          <input type="email" />
+        </label>
+        <br />
+        <label for="mensaje">Mensaje</label>
+        <!-- text area permite el ingreso de varias lineas de texto -->
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <br />
+
+        <!-- boton para enviar el form, explicaremos mas a fondo las proximas clases -->
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+
+    <!-- Etiqueta de pie de pagina footer -->
+    <footer>
+      <p>Pie de pagina Hecho con ❤ en Nucba</p>
+      <p>Unite a nuestro ig <a href="#">Seguinos</a></p>
+      <p><b>Copate</b> y seguinos</p>
+      <p>Aca voy a tirar un <span>span</span></p>
+    </footer>
+  </body>
+</html>

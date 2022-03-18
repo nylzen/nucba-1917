@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <title>nucba web</title>
+  </head>
+  <!-- Etiquetas de titulo en HTML -->
+
+  <!-- Etiqueta h1 es la que debera llevar el contenido mas importante de nuestra web, recuerden que, semanticamente no deberia repetirse en el mismo archivo .html -->
+    <h1>Mi web en Nucba</h1> 
+    <!-- La importancia de las demas etiquetas h van en orden descendente -->
+    <h2>Esto es un h2</h2>
+    <h3>Esto es un h3</h3>
+    <h4>Esto es un h4</h4>
+    <h5>Esto es un h5</h5>
+    <h6>Esto es un h6</h6>
+
+    <!-- parrafo -->
+    <p>Esto va a ser un parrafo</p>
+
+    <!-- Etiquetas de Listas -->
+    <h2>Esto es una lista desordenada</h2>
+
+<!-- Para poder hacer una lista, debemos pensar si esta es Orndenada (OL) o desordenada (UL). Luego dentro de la lista deberemos poner los items de nuestra lista dentro de la etiqueta <li> -->
+
+<!-- Ejemplo de lista desordenada -->
+<!-- Casos de usos, barras de navegacion, ingredientes, cosas que no tengan un orden, etc -->
+<ul>
+  <li>Tomate</li>
+  <li>Mayonesa</li>
+  <li>Pan</li>
+</ul>
+
+<!-- Ejemplo de lista ordenada -->
+<!-- Casos de uso, paso a paso, top de algo, etc -->
+<h2>Esto es una lista ordenada</h2>
+<ol>
+  <li>Spiderman</li>
+  <li>Volver al futuro</li>
+  <li>Harry potter</li>
+</ol>
+
+<h2>Lista con otra lista dentro</h2>
+<!-- Podemos hacer listas dentro de otras listas, en este caso creamos una lista desordenada UL y dentro le agregamos una lista desordenada UL y otra ordenada OL -->
+    <ul>
+      <li>Tomate</li>
+      <!-- Atentos aca como luego de un item li agregamos la etiqueta ul para indicarle que queremos otro item luego de Tomate -->
+      <ul>
+        <li>Cherry</li>
+      </ul>
+      <li>Lechuga</li>
+      <!-- Lo mismo aca, creamos una lista ordenada-->
+      <ol>
+        <li>Mayonesa</li>
+      </ol>
+      <li>Pan</li>
+      <li>Hamburguesa</li>
+    </ul>
+
+
+
+<!-- Links -->
+    <h2>Vamos a ver los links</h2>
+
+    <!-- en href va el link a la pagina donde queremos ir
+    y con el atributo target le decimos si queremos abrirlo en otra pestana -->
+    <a href="https://google.com" target="_blank"> Ir a Google </a>
+
+    <!-- Imagenes en la web -->
+   
+      <h2>Imagen desde un link externo</h2>
+      <img src="https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3263187_f.jpg" alt="Aca hay una foto de una cindor">
+
+      <!-- Navegamos entre nuestros archivos para linkear nuestra imagen a la etiqueta, en este caso la imagen esta dentro de la carpeta img -->
+      <h2>Esto es una imagen desde mi carpeta</h2>
+      <img src="img/chocolatada.jpg" alt="">
+
+      <h2>Imagenes con link</h2>
+      <a href="https://google.com">
+        <img src="img/descarga/descarga.jpg" alt="">
+      </a>
+      <!-- Etiqueta br para dar saltos de linea -->
+      <br>
+
+      <!-- Creamos una etiqueta link para dirigirnos a un archivo dentro de nuestra carpeta, en este caso linkeamos al html que esta dentro de la carpeta paginas -->
+      <a href="paginas/contacto.html">Ir a contacto</a>
+  </body>
+</html>

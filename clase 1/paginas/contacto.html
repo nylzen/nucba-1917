@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+  </head>
+  <body>
+    <h1>Contactanos</h1>
+    <!-- Creamos un link para volver a nuestro index.html, como el index esta en la carpeta raiz, lo que hacemos es escribir en el href "../" lo que indica que queremos ir una carpeta atras -->
+
+    <!-- IMPORTANTE, si queremos retroceder mas carpetas lo que hacemos es repetir el ../ -->
+    <a href="../index.html">Volver atras</a>
+    <h2>Descargate los mejores juegos</h2>
+
+    <!-- Aca volvemos a crear un link con una imagen, que nos llevara de nuevo a nuestro index.html -->
+    <a href="../index.html" target="_blank">
+      <img src="../img/descarga/descarga.jpg" alt="" />
+    </a>
+
+    <!-- Tablas HTML -->
+    <!-- https://developer.mozilla.org/es/docs/Web/HTML/Element/table aca tienen la documentacion para chusmear mas a fondo -->
+
+    <!-- Para que pdamos crear una tabla debemos crear la etiqueta table, que dentro tendra todo nuestro contenido -->
+    <table>
+      <!-- thead nos indica el encabezado de nuestra tabla -->
+      <thead>
+        <!-- Las filas las creamos con la etiqueta tr (Table Row), el contenido se pondra uno al lado del otro -->
+        <tr>
+          <th>Equipo</th>
+          <th>Martes</th>
+          <th>Miercoles</th>
+          <th>Jueves</th>
+          <th>Viernes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Creamos otra fila -->
+        <tr>
+          <!-- El contenido de la tabla lo creamos con la etiqueta td (table data), cada td representa una celda, como pasa arriba, se colocaran uno al lado del otro -->
+          <td>Boca</td>
+          <td>58pts</td>
+          <td>10hs</td>
+          <td>11hs</td>
+          <td>12hs</td>
+        </tr>
+        <tr>
+          <td>7hs</td>
+          <td>8hs</td>
+          <td>7hs</td>
+          <td>8hs</td>
+          <td>10hs</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Creamos botones para navegar entre nuestros archivos -->
+    <a href="../index.html">Volver a la home</a>
+    <br />
+    <a href="otracarpeta/contacto2.html">Ir a contacto 2</a>
+    <br />
+    <a href="../index.html">otro volver a la home</a>
+  </body>
+</html>
