@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.parrafo {
+  /* padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 30px; */
+
+  /* Shorthand padding, piensen como las agujas del reloj, arriba, derecha, abajo, izquierda */
+  /* padding: 20px 30px 10px 15px; */
+
+  /* Vertical / Horizontal */
+  /* padding: 50px 20px; */
+
+  /* Top / horizontal / Bot */
+  padding: 20px 200px 5px;
+
+  /* Borde que rodea la caja, solid, dotted, dashed, etc, etc */
+  border: 10px outset #1e1e1e;
+
+  /* El shorthand del margin es igual al del padding */
+  margin: 50px;
+
+  /* dimensiones */
+  width: 90px;
+  height: 250px;
+}
+
+/* div {
+  width: 150px;
+  height: 100px;
+  border: 1px solid slateblue;
+}
+
+div {
+  /* overflow: visible; */
+/* overflow: hidden; */
+/* overflow: scroll; */
+/* overflow: auto; */
+/* } */
+
+/* .resaltado {
+  background: green;
+}
+div {
+  width: 200px;
+  height: 200px;
+  border: 10px solid rebeccapurple;
+  padding: 20px;
+  box-sizing: content-box; 
+} */
+
+.inline {
+  background-color: salmon;
+  border-style: groove;
+  border-width: 5px;
+  border-color: red;
+
+  /* shorthand */
+  border: 2px solid blue;
+  /* display: inline-block; */
+  width: 200px;
+  height: 150px;
+  /* display: none; */
+}
+
+.block {
+  margin: 2px;
+  background: hotpink;
+  display: inline;
+}
+
+/* Centrar un div con flex */
+.contenedor {
+  background-color: khaki;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hijo {
+  width: 200px;
+  height: 200px;
+  background: blue;
+}
+
+/* relative */
+article {
+  border: 2px dashed red;
+}
+
+h1 {
+  position: relative;
+  border-top: 2px solid yellow;
+  background-color: darkslategray;
+  color: #fff;
+  /* top/left/right/bottom */
+  top: 50px;
+}
+
+/* absolute */
+.box1 {
+  width: 100px;
+  height: 100px;
+  background-color: blueviolet;
+}
+.box2 {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+.box3 {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.box4 {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+.box5 {
+  width: 100px;
+  height: 100px;
+  background-color: yellowgreen;
+}
+
+/* relative + absolute */
+.azul {
+  height: 100vh;
+  position: relative;
+}
+
+.rojo {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
