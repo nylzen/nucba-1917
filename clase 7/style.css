@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container div {
+  width: 200px;
+  height: 200px;
+  background: coral;
+  margin: 10px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Flex direction */
+
+.container {
+  height: 100vh;
+  background: crimson;
+  /* display: flex; */
+  /* por defecto viene en row */
+  /* flex-direction: row; */
+
+  /* row-reverse */
+  /* flex-direction: row-reverse; */
+
+  /* column */
+  /* flex-direction: column; */
+
+  /* column-reverse */
+  /* flex-direction: column-reverse; */
+
+  /* flex-wrap acomodar elementos en varias lineas */
+  /* flex-wrap: wrap; */
+
+  /* flex-flow para usar flex-direction y flex-wrap en la misma linea */
+  /* flex-flow: row wrap; */
+
+  /* Justify Content Beleza */
+  /* justify-content: flex-start; default */
+  /* justify-content: flex-end; */
+  /* justify-content: center; */
+  /* justify-content: space-around; */
+  /* justify-content: space-between; */
+  /* justify-content: space-evenly; */
+
+  /** Align items */
+  /* poner los otros align */
+  /* align-items: center; */
+
+  /** Align Content */
+  /* align-content: center; */
+
+  /** gap */
+  /* funciona como un margin */
+  /* gap: 20px; */
+}
+
+.container {
+  display: flex;
+  /* flex-flow: row wrap; */
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+/* Propiedades para los hijos (items flex) */
+
+.item {
+  /* Con el order modificamos el orden de los elementos */
+  /* order: 1; */
+  /* flex-grow: 1; */
+  /* flex-shrink: 0; */
+  /* flex-basis: 500px; */
+  /* shorthand de grow/shrink/basis */
+  /* flex: 0 0 400px; */
+  /* align-self: stretch; */
+}
+
+.item2 {
+  /* flex-grow: 2; */
+  align-self: flex-end;
+}
+
+.item3 {
+  /* flex-grow: 10; */
+  align-self: flex-start;
+}
