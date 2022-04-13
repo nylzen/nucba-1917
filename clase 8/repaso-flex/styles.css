@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: salmon;
+}
+
+.padre-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  margin: 0 auto;
+}
+
+div .hijos-flexibles {
+  height: 100px;
+  width: 100px;
+  background-color: bisque;
+  margin: 10px;
+}
+
+.item-1 {
+  order: 3;
+  align-self: flex-start;
+}
+
+.item-2 {
+  order: 1;
+  align-self: flex-end;
+}
+
+.item-3 {
+  order: 2;
+}
