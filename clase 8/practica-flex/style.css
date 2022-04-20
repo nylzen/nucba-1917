@@ -118,7 +118,6 @@ input:focus {
   .login__img {
     display: block;
     background-image: url("https://cdn141.picsart.com/309256231011211.png?type=webp&to=min&r=640");
-
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

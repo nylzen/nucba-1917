@@ -1,0 +1,67 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: salmon;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 100vh;
+  align-content: center;
+}
+
+.elemento {
+  width: 200px;
+  height: 200px;
+  background: blueviolet;
+  margin: 10px;
+}
+
+.elemento {
+  background: linear-gradient(#f69d3c, #3f87a6);
+  /* background: linear-gradient(to top, red, orange, yellow, green, blue, violet); */
+  /* background: radial-gradient(#f69d3c, #3f87a6); */
+  /* background: repeating-linear-gradient(#f69, #3f8 60px); */
+  /* background: linear-gradient(20deg, black, white); */
+  /* background: linear-gradient(20deg, rgba(124, 245, 244, 0.2), green); */
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+@media (min-width: 1000px) {
+  .contenedor {
+    flex-direction: column;
+  }
+  .elemento {
+    background: yellowgreen;
+    width: 700px;
+  }
+}
+
+/* Sintaxis completa */
+/* @media media-type(media-feature) {
+   Contenido 
+}
+
+@media (media-feature) {
+   contenido 
+}
+
+@media (max-width: 768px) {
+   contenido 
+}
+
+@media screen and (min-width: 1200px){
+  contenido 
+} */

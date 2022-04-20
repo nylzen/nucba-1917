@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu-btn {
+  background: salmon;
+  width: 40px;
+  height: 40px;
+  margin: 10px auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+.menu-btn span {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.toggle {
+  display: none;
+  text-align: center;
+  background: salmon;
+  width: 150px;
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+
+.toggle li {
+  list-style: none;
+}
+
+.menu-toggle:checked + .toggle {
+  display: block;
+}
+
+.fixed {
+  background: green;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  color: white;
+  cursor: pointer;
+}
