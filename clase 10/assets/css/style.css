@@ -1,0 +1,372 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+
+/* Variables de colores */
+:root {
+  --yellow: #f7de82;
+  --blue: #0c4ea2;
+  --bold: 900;
+  --medium: 700;
+  --regular: 400;
+  --thin: 300;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  width: 100vw;
+  max-width: 100%;
+  max-height: 100%;
+  font-family: "Lato", sans-serif;
+  font-weight: var(--thin);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0 8rem 0;
+  background: var(--yellow);
+}
+
+/** Menu */
+nav {
+  width: 90%;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  /* width: 100%; */
+}
+
+.menu i {
+  font-size: 2rem;
+  color: var(--blue);
+}
+
+.item {
+  width: 100%;
+  order: 1;
+  text-transform: uppercase;
+  display: none;
+}
+
+.menu .logo {
+  width: 15rem;
+}
+
+/** Section 1 */
+.about__section {
+  background: var(--yellow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__content--img {
+  width: 70%;
+  margin: 5rem auto;
+}
+
+.title-img {
+  width: 350px;
+}
+
+.about__content p {
+  font-size: 2rem;
+  font-weight: var(--thin);
+  margin: 1rem 0 5rem 0;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.about__content .btn {
+  background: var(--blue);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  text-transform: uppercase;
+  font-weight: var(--medium);
+  font-size: 1.3rem;
+}
+/* Termine section about */
+/** Section description */
+.description__section {
+  display: flex;
+  flex-direction: column;
+  background: var(--blue);
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 8rem 0;
+}
+
+.description__section h2 {
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-bottom: 2rem;
+}
+
+.description__section h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: var(--thin);
+  max-width: 300px;
+  margin-bottom: 5rem;
+}
+
+.info-card {
+  width: 40%;
+  margin-bottom: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 0;
+  /* background-color: #f7de82; */
+  padding: 20px;
+}
+
+.card p {
+  max-width: 300px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: var(--thin);
+}
+/* Terminada description */
+/** List Products */
+.listproducts__section {
+  padding: 8rem 0;
+}
+
+.listproducts__section h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--blue);
+}
+
+.products__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.3);
+  margin-top: 7rem;
+  width: 350px;
+  height: 520px;
+  border-radius: 3rem;
+  position: relative;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  -ms-border-radius: 3rem;
+  -o-border-radius: 3rem;
+}
+
+.product img {
+  width: 200px;
+}
+
+.product__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-top: 1.9rem;
+  max-width: 200px;
+}
+
+.product__price {
+  color: var(--blue);
+  font-weight: var(--medium);
+  font-size: 2.8rem;
+  margin: 2rem 0;
+}
+
+.product__btn {
+  background: var(--yellow);
+  border: none;
+  padding: 1rem 5rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.disabled {
+  background: #f3f3f3;
+  border: none;
+  padding: 1rem 5rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: gray;
+  cursor: no-drop;
+}
+
+.sinStock {
+  background: #f01919;
+  color: white;
+  text-transform: uppercase;
+  padding: 0.8rem 1rem;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1rem;
+}
+/* CArrito */
+.cart__section {
+  background: #f3f3f3;
+  padding: 4rem 0;
+}
+
+.cart__section h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  color: var(--blue);
+}
+
+.cart__section p {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1.5rem 0 2rem 0;
+  color: var(--blue);
+}
+
+.item-img {
+  width: 50px;
+}
+
+.cart__container {
+  width: 90%;
+  background: white;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  color: var(--blue);
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.cart__item--content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart__price {
+  font-size: 2rem;
+  font-weight: var(--medium);
+}
+
+.total__items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--blue);
+  font-size: 1.6rem;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+}
+
+.cart__btn {
+  background: var(--yellow);
+  border: none;
+  font-weight: var(--medium);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  cursor: pointer;
+  width: 400px;
+  text-transform: uppercase;
+}
+/* Terminado el cartlist */
+/** Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue);
+  padding: 8rem 0;
+  color: white;
+  text-align: center;
+}
+
+footer .title {
+  width: 15rem;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.contacto {
+  margin-bottom: 2rem;
+}
+
+.contacto a {
+  color: white;
+  margin-top: 1rem 0;
+}
+
+.legales {
+  max-width: 250px;
+  margin-bottom: 2rem;
+}

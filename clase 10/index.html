@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PedimonYa App</title>
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <ul class="menu">
+          <li>
+            <a href="#"
+              ><img
+                src="./assets/img/pedimon-logo.png"
+                alt="Pedimon logo"
+                class="logo"
+            /></a>
+          </li>
+          <li class="item"><a href="#about">About</a></li>
+          <li class="item"><a href="#description">Description</a></li>
+          <li class="item"><a href="#productos">Productos</a></li>
+          <li class="item">
+            <a href="#cartList"><i class="fa-solid fa-cart-shopping"></i></a>
+          </li>
+          <div class="btn__container">
+            <a href="#"><i class="fa-solid fa-bars"></i></a>
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!--* Section 1 About -->
+      <section class="about__section" id="about">
+        <div class="about__content">
+          <img
+            src="./assets/img/pedimon-text.png"
+            alt="Pedimon"
+            class="title-img"
+          />
+          <p>
+            Busca tu Pokemon favorito y disfruta de los beneficios de tener un
+            bicho de estos en tu casa! Hay como cinco millones para coleccionar!
+          </p>
+          <a href="listProducts" class="btn">Los quiero atrapar</a>
+        </div>
+        <div class="about__content--img">
+          <img src="./assets/img/pikachu-hero.png" alt="pikachu hero" />
+        </div>
+      </section>
+      <!-- Terminada la seccion 1 -->
+      <!-- Seccion 2 Description -->
+      <section class="description__section" id="description">
+        <h2>No te quedes sin tu pedido</h2>
+        <h3>
+          Dale perry, no te podes quedar sin tu Pedimon! Mira lo facil que es
+          ...
+        </h3>
+        <div class="card__container">
+          <!--* Card 1 -->
+          <div class="card">
+            <img
+              src="./assets/img/info-icon-1.png"
+              alt="info 1"
+              class="info-card"
+            />
+            <p>
+              Elegis el Pedi que vos queres de la lista de aca abajo (si hay)
+            </p>
+          </div>
+          <!--* Card 2 -->
+          <div class="card">
+            <img
+              src="./assets/img/info-icon-2.png"
+              alt="info 1"
+              class="info-card"
+            />
+            <p>
+              Lo agregas al carrito de la camada tiene que haber alguno en algun
+              lado
+            </p>
+          </div>
+          <!--* Card 3 -->
+          <div class="card">
+            <img
+              src="./assets/img/info-icon-3.png"
+              alt="info 1"
+              class="info-card"
+            />
+            <p>
+              Le das al boton de comprar y listo! Ya tenes tus Pedis en tu casa
+              muy pronto
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Terminada la section description -->
+      <!--* List Products -->
+      <section class="listproducts__section" id="listProducts">
+        <h2>Aca va la lista de los Cokemone</h2>
+        <!-- Container para los pokemones -->
+        <div class="products__container">
+          <!-- Los pokemone -->
+          <!-- 1 -->
+          <div class="product">
+            <img src="./assets/img/balbasaur.png" alt="balbasaur" />
+            <p class="product__title">La tortuga franklin</p>
+            <span class="product__price">$125</span>
+            <button class="product__btn">Comprar</button>
+          </div>
+          <!-- 2 -->
+          <div class="product">
+            <img src="./assets/img/balbasaur.png" alt="balbasaur" />
+            <p class="product__title">La tortuga franklin</p>
+            <span class="product__price">$125</span>
+            <button class="disabled">Comprar</button>
+            <div class="sinStock">Sin Stock. Volo</div>
+          </div>
+          <!-- 3 -->
+          <div class="product">
+            <img src="./assets/img/balbasaur.png" alt="balbasaur" />
+            <p class="product__title">La tortuga franklin</p>
+            <span class="product__price">$125</span>
+            <button class="product__btn">Comprar</button>
+          </div>
+          <!-- 4 -->
+          <div class="product">
+            <img src="./assets/img/balbasaur.png" alt="balbasaur" />
+            <p class="product__title">La tortuga franklin</p>
+            <span class="product__price">$125</span>
+            <button class="disabled">Comprar</button>
+            <div class="sinStock">Sin Stock. Volo</div>
+          </div>
+        </div>
+      </section>
+      <!-- Section Terminada -->
+      <!-- Section Carrito -->
+      <section class="cart__section" id="carList">
+        <h2>Ponele que aca va un carrito</h2>
+        <p>
+          Otra que podemos hacer es que se mande al carrito en el navbar y se
+          abra, pero bueno, despues con Js
+        </p>
+        <div class="cart__container">
+          <!-- item 1 -->
+          <div class="cart__item">
+            <div class="cart__item--content">
+              <img
+                src="./assets/img/squirtle.png"
+                alt="pinguino"
+                class="item-img"
+              />
+              <p class="cart__title">Vamo a calmarno</p>
+              <span class="cart__price">$987</span>
+            </div>
+          </div>
+          <!-- item 2 -->
+          <div class="cart__item">
+            <div class="cart__item--content">
+              <img
+                src="./assets/img/squirtle.png"
+                alt="pinguino"
+                class="item-img"
+              />
+              <p class="cart__title">Vamo a calmarno</p>
+              <span class="cart__price">$987</span>
+            </div>
+          </div>
+          <!-- item 3 -->
+          <div class="cart__item">
+            <div class="cart__item--content">
+              <img
+                src="./assets/img/squirtle.png"
+                alt="pinguino"
+                class="item-img"
+              />
+              <p class="cart__title">Vamo a calmarno</p>
+              <span class="cart__price">$987</span>
+            </div>
+          </div>
+          <!-- total -->
+          <div class="total__items">
+            <p class="total">Total: $NaN</p>
+            <button class="cart__btn">Finalizar Compra</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="title">
+        <img src="./assets/img/pedimon-text.png" alt="" class="title" />
+      </div>
+      <div class="contacto">
+        <h2>Contacto</h2>
+        <a href="tel:040404">04 04 04</a>
+        <p>Calle Falsa 123</p>
+      </div>
+
+      <div class="legales">
+        <h2>Legales</h2>
+        <p>
+          Cualquier inconveniente dirigirse al lobby que nos encargamos de todo
+        </p>
+      </div>
+
+      <p>Hecho con ❤ en Nucba</p>
+    </footer>
+  </body>
+</html>
