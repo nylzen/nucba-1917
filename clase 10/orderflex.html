@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order</title>
+    <style>
+      body {
+        background: #1e1e1e;
+        color: white;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container div {
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .item-1 {
+        width: 200px;
+        height: 200px;
+        background: red;
+        /* order: 3; */
+      }
+      .item-2 {
+        width: 200px;
+        height: 200px;
+        background: rebeccapurple;
+        order: 1;
+      }
+      .item-3 {
+        width: 200px;
+        height: 200px;
+        background: salmon;
+        /* order: 2; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item-1"><p>Logo</p></div>
+      <div class="item-2"><p>Container Items</p></div>
+      <div class="item-3"><p>Menu</p></div>
+    </div>
+  </body>
+</html>

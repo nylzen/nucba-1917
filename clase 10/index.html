@@ -12,6 +12,7 @@
     />
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/desktop.css" />
   </head>
   <body>
     <!-- Header -->
@@ -19,19 +20,23 @@
       <nav>
         <ul class="menu">
           <li>
-            <a href="#"
+            <a href="#" class="logo-link"
               ><img
                 src="./assets/img/pedimon-logo.png"
                 alt="Pedimon logo"
                 class="logo"
             /></a>
           </li>
-          <li class="item"><a href="#about">About</a></li>
-          <li class="item"><a href="#description">Description</a></li>
-          <li class="item"><a href="#productos">Productos</a></li>
-          <li class="item">
-            <a href="#cartList"><i class="fa-solid fa-cart-shopping"></i></a>
-          </li>
+
+          <div class="container-items">
+            <li class="item"><a href="#about">About</a></li>
+            <li class="item"><a href="#description">Description</a></li>
+            <li class="item"><a href="#productos">Productos</a></li>
+            <li class="item">
+              <a href="#cartList"><i class="fa-solid fa-cart-shopping"></i></a>
+            </li>
+          </div>
+
           <div class="btn__container">
             <a href="#"><i class="fa-solid fa-bars"></i></a>
           </div>
@@ -133,6 +138,20 @@
             <button class="product__btn">Comprar</button>
           </div>
           <!-- 4 -->
+          <div class="product">
+            <img src="./assets/img/balbasaur.png" alt="balbasaur" />
+            <p class="product__title">La tortuga franklin</p>
+            <span class="product__price">$125</span>
+            <button class="disabled">Comprar</button>
+            <div class="sinStock">Sin Stock. Volo</div>
+          </div>
+          <div class="product">
+            <img src="./assets/img/balbasaur.png" alt="balbasaur" />
+            <p class="product__title">La tortuga franklin</p>
+            <span class="product__price">$125</span>
+            <button class="disabled">Comprar</button>
+            <div class="sinStock">Sin Stock. Volo</div>
+          </div>
           <div class="product">
             <img src="./assets/img/balbasaur.png" alt="balbasaur" />
             <p class="product__title">La tortuga franklin</p>

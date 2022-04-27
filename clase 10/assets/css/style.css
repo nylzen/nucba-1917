@@ -67,9 +67,14 @@ nav {
   color: var(--blue);
 }
 
+.container-items {
+  order: 1;
+  width: 100%;
+}
+
 .item {
   width: 100%;
-  order: 1;
+  text-align: center;
   text-transform: uppercase;
   display: none;
 }
@@ -369,4 +374,101 @@ footer .title {
 .legales {
   max-width: 250px;
   margin-bottom: 2rem;
+}
+
+/* Media queries */
+
+/* Desktop */
+@media (min-width: 1024px) {
+  /* Menu */
+  .menu {
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin: 1rem auto;
+    /* background-color: yellowgreen; */
+  }
+
+  .item {
+    display: flex;
+    cursor: pointer;
+    width: auto;
+    /* background: red; */
+    padding: 20px;
+  }
+
+  .btn__container {
+    display: none;
+  }
+
+  .container-items {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 800px;
+  }
+
+  .menu i {
+    font-size: 1.7rem;
+  }
+  /* Finalizado el menu */
+  /* Secion 1 About */
+  .about__section {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 5rem 0;
+    gap: 50px;
+  }
+
+  .about__content {
+    max-width: 70%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* margin-right: 50px; */
+  }
+
+  .about__content p {
+    text-align: left;
+    max-width: 700px;
+    padding: 0;
+  }
+
+  .about__content--img {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .about__content--img {
+    margin: 0;
+  }
+
+  /* Finalizada seccion 1 */
+  /* Secion 2  */
+  .card__container {
+    display: flex;
+    gap: 15rem;
+  }
+
+  .description__section h3 {
+    max-width: 400px;
+    margin-top: 2rem;
+  }
+  /* Finalizada seccion 2 */
+  /* seccion 3 lista pokemone*/
+  .products__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+    margin-top: 10rem;
+  }
+  .product {
+    margin: 0;
+  }
+  /* Finalizada la seccion 3 */
+  /* Seccion 4 */
+  .cart__container {
+    max-width: 1000px;
+  }
 }
