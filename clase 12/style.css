@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container-clases,
+.elementos-container {
+  max-width: 500px;
+}
+
+.yellow {
+  background-color: bisque;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.salmon {
+  background: rgba(250, 128, 114, 0.609);
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 4rem;
+  background-color: azure;
+}
+
+h2 {
+  margin: 2rem 0;
+}
+
+.cuadrado-hover {
+  background: salmon;
+  width: 200px;
+  height: 200px;
+  margin: 20px 0;
+  /* transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  -ms-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease; */
+}
+
+/* activamos el hover */
+.cuadrado-hover:hover {
+  background: darkblue;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.9s ease;
+  -webkit-transition: all 0.9s ease;
+  -moz-transition: all 0.9s ease;
+  -ms-transition: all 0.9s ease;
+  -o-transition: all 0.9s ease;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+/* Active / Link / Visited / Hover */
+
+.active:link {
+  color: red; /* Enlace no visitado*/
+}
+
+.active:visited {
+  color: cornflowerblue;
+  /*Enlace visitado */
+}
+
+.active:active {
+  color: yellowgreen; /*Cuando el usuario hace click*/
+}
+
+.active:hover {
+  background: seagreen;
+}
+
+/* Focus */
+.red-input:focus {
+  background: salmon;
+  color: white;
+  outline: none;
+  border: salmon;
+  padding: 10px 15px;
+}
+
+.blue-input:focus {
+  background: skyblue;
+  color: white;
+  padding: 10px 15px;
+  outline: none;
+}
+
+/* first child */
+.first p:first-child {
+  color: lime;
+  background: black;
+  padding: 5px;
+}
+
+.first-child-container {
+  background: rgba(250, 128, 114, 0.609);
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.first a:first-of-type {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 5px;
+}
+
+/* Last child */
+.last p:last-child {
+  color: lime;
+  background: black;
+  padding: 5px;
+}
+
+/* first of type */
+.firstof h2:first-of-type {
+  color: lime;
+  background-color: black;
+  padding: 5px;
+}
+
+/* nth child */
+.first-nth p:nth-child(odd) {
+  background-color: salmon;
+  color: white;
+  padding: 5px;
+}
+
+.first-nth {
+  margin-bottom: 20px;
+}
+.second p:nth-child(even) {
+  background: cornflowerblue;
+  color: white;
+  padding: 5px;
+}
+
+.m-20 {
+  margin: 20px 0;
+}
+
+.third p:nth-child(1) {
+  background: salmon;
+  color: white;
+  padding: 5px;
+}
+
+.fourth p:nth-child(3n) {
+  background: cornflowerblue;
+  color: white;
+  padding: 5px;
+}
+
+.fifth p:nth-child(3n + 3) {
+  background: salmon;
+  color: white;
+  padding: 5px;
+}
+
+/* Pseudo Elementos */
+/* first letter */
+.f-letter::first-letter {
+  font-size: 5rem;
+  color: white;
+  background: cornflowerblue;
+  padding: 5px;
+}
+
+/* first line */
+.f-line::first-line {
+  color: lime;
+  background-color: black;
+}
+
+.f-line span {
+  background: cornflowerblue;
+  color: white;
+  padding: 5px;
+}
+
+/* Before */
+.p-before::before {
+  content: "❤";
+  margin-right: 10px;
+  color: red;
+}
+
+.p-after::after {
+  content: "☢";
+  color: white;
+  margin-left: 10px;
+}
+
+/* Before y after juntos */
+
+.p-be-af::before {
+  content: "before";
+  background: cornflowerblue;
+  padding: 5px;
+  color: white;
+  margin-right: 10px;
+}
+
+.p-be-af::after {
+  content: "after";
+  background: cornflowerblue;
+  padding: 5px;
+  color: white;
+  margin-left: 10px;
+}
+
+/* Ejemplo combinado */
+.p-tooltip span[data-descr] {
+  cursor: help;
+  text-decoration: underline;
+  color: salmon;
+  position: relative;
+}
+
+.p-tooltip span[data-descr]:hover::after {
+  content: attr(data-descr);
+  position: absolute;
+  left: 0;
+  top: 25px;
+  background: #ffffcc;
+  border: 1px solid salmon;
+  padding: 12px;
+  font-size: 0.8rem;
+  min-width: 100px;
+}
+
+/* Placeholder */
+
+.input-placeholder {
+  outline: none;
+  border: none;
+  height: 23px;
+  width: 300px;
+}
+
+.input-placeholder::placeholder {
+  background: cornflowerblue;
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* ACA AGREGO MEDIAQUERIES PARA ACOMODAR EL CONTAINER PSEUDO ELEMENTOS */
+/* para que les quede mas lindo a ustedes para verlo, tranquis jasjas */
+@media (min-width: 1000px) {
+  body {
+    background-color: azure;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+}
