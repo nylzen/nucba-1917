@@ -1,0 +1,24 @@
+* { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body { background-color: salmon; }
+
+.container { background-color: white; width: 1200px; height: 500px; }
+
+.container h1 { color: red; text-align: center; }
+
+.container .flex { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; gap: 50px; }
+
+.container .flex .item { background-color: cornflowerblue; padding: 20px; }
+
+.container .flex .item p { color: white; }
+
+.container .flex .item p span { color: springgreen; }
+
+.container .flex .item p:hover { background: red; }
+
+.container .flex .item p:hover span { color: green; }
+
+.otro-container { background-color: cornflowerblue; }
+
+.otro-container h2 { font-size: 5rem; color: white; }
+/*# sourceMappingURL=style.css.map */

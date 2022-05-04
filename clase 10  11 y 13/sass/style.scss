@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: salmon;
+}
+
+.container {
+  background-color: white;
+  width: 1200px;
+  height: 500px;
+
+  h1 {
+    color: red;
+    text-align: center;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    .item {
+      background-color: cornflowerblue;
+      padding: 20px;
+
+      p {
+        color: white;
+        span {
+          color: springgreen;
+        }
+      }
+      p:hover {
+        background: red;
+
+        span {
+          color: green;
+        }
+      }
+    }
+  }
+}
+
+.otro-container {
+  background-color: cornflowerblue;
+
+  h2 {
+    font-size: 5rem;
+    color: white;
+  }
+}

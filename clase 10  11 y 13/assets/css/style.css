@@ -472,3 +472,170 @@ footer .title {
     max-width: 1000px;
   }
 }
+
+/* Pseudo clases */
+.menu li a {
+  position: relative;
+}
+
+a:visited {
+  color: var(--blue);
+}
+
+.item {
+  position: relative;
+}
+
+.menu .item:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  height: 5px;
+  background: var(--blue);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+/* Boton */
+.btn:hover {
+  background: #072853;
+  transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+  -moz-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  -o-transform: scale(1.01);
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.btn:active {
+  transform: scale(0.99);
+  -webkit-transform: scale(0.99);
+  -moz-transform: scale(0.99);
+  -ms-transform: scale(0.99);
+  -o-transform: scale(0.99);
+}
+
+/* cards */
+.card {
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.card:hover {
+  border: 1px solid white;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  cursor: pointer;
+
+  box-shadow: 1px 0px 39px -14px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 1px 0px 39px -14px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 1px 0px 39px -14px rgba(0, 0, 0, 1);
+}
+
+/* Productos */
+.product {
+  box-shadow: none;
+}
+
+.product:hover {
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+}
+
+.product__btn:hover {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #fed334;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.product img:hover {
+  transform: rotate(25deg);
+  -webkit-transform: rot;
+  -moz-transform: rot;
+  -ms-transform: rot;
+  -o-transform: rot;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+/* Sin stock */
+.sinStock:hover {
+  transform: rotate(15deg);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transform: rotate(15deg);
+  -moz-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+}
+
+/* Data descr */
+.cart__item--content {
+  position: relative;
+}
+p[data-descr]:hover::after {
+  content: attr(data-descr);
+  position: absolute;
+  cursor: pointer;
+  margin-left: 20px;
+  width: 100px;
+  height: 50px;
+  background-color: var(--blue);
+  color: white;
+  padding: 20px;
+}
+
+.item-img:hover {
+  transition: all 0.5s ease;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+/* Cart btn */
+.cart__btn:hover {
+  cursor: pointer;
+  background: #fed334;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}

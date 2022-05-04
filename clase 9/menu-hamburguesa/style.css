@@ -54,7 +54,7 @@
   list-style: none;
 }
 
-.menu-toggle:checked + .toggle {
+.menu-toggle:checked ~ .toggle {
   display: block;
 }
 
