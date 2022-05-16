@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slider {
+  overflow: hidden;
+  height: 50vh;
+}
+
+.slider figure {
+  display: flex;
+  width: 500%;
+  position: relative;
+  left: 0;
+  animation: 20s slider infinite;
+  -webkit-animation: 20s slider infinite;
+}
+
+.slider figure img {
+  width: 20%;
+}
+
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}

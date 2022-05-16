@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: rosybrown;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "nav header header"
+    "nav productos publicidad"
+    "nav servicios publicidad"
+    "nav footer footer";
+  grid-template-rows: 200px 1fr 1fr 75px;
+  grid-template-columns: 20% auto 15%;
+  width: 800px;
+}
+
+header {
+  background: salmon;
+  grid-area: header;
+}
+
+footer {
+  grid-area: footer;
+  background: #1e1e1e;
+  color: white;
+}
+
+.productos {
+  grid-area: productos;
+  background-color: cornflowerblue;
+  padding: 20px;
+}
+
+.servicios {
+  grid-area: servicios;
+  background-color: coral;
+}
+
+aside {
+  grid-area: publicidad;
+  background-color: yellow;
+}
+
+nav {
+  grid-area: nav;
+  background-color: blueviolet;
+}
+
+/* BEM */
+header {
+  /* height: 500px; */
+  /* min-height: 500px; */
+}
+
+.header__hero__text {
+  margin-bottom: 20px;
+}
+.btn {
+  padding: 7px 12px;
+  background: white;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.btn--success {
+  background: greenyellow;
+}

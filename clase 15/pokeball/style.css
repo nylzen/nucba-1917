@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.pokeball {
+  position: relative;
+  width: 10%;
+  animation: caida 0.5s ease-in-out,
+    shake 1.5s infinite cubic-bezier(0.36, 0.7, 0.2, 0.9);
+  -webkit-animation: caida 0.5s ease-in-out,
+    shake 1.5s infinite cubic-bezier(0.36, 0.7, 0.2, 0.9);
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0) rotate(0);
+    -webkit-transform: translate(0, 0) rotate(0);
+    -moz-transform: translate(0, 0) rotate(0);
+    -ms-transform: translate(0, 0) rotate(0);
+    -o-transform: translate(0, 0) rotate(0);
+  }
+  20% {
+    transform: translate(-10px, 0) rotate(-20deg);
+    -webkit-transform: translate(-10px, 0) rotate(-20deg);
+    -moz-transform: translate(-10px, 0) rotate(-20deg);
+    -ms-transform: translate(-10px, 0) rotate(-20deg);
+    -o-transform: translate(-10px, 0) rotate(-20deg);
+  }
+  30% {
+    transform: translate(10px, 0) rotate(20deg);
+    -webkit-transform: translate(10px, 0) rotate(20deg);
+    -moz-transform: translate(10px, 0) rotate(20deg);
+    -ms-transform: translate(10px, 0) rotate(20deg);
+    -o-transform: translate(10px, 0) rotate(20deg);
+  }
+  50% {
+    transform: translate(-10px, 0) rotate(-10deg);
+    -webkit-transform: translate(-10px, 0) rotate(-10deg);
+    -moz-transform: translate(-10px, 0) rotate(-10deg);
+    -ms-transform: translate(-10px, 0) rotate(-10deg);
+    -o-transform: translate(-10px, 0) rotate(-10deg);
+  }
+  60% {
+    transform: translate(10px, 0) rotate(10deg);
+    -webkit-transform: translate(10px, 0) rotate(10deg);
+    -moz-transform: translate(10px, 0) rotate(10deg);
+    -ms-transform: translate(10px, 0) rotate(10deg);
+    -o-transform: translate(10px, 0) rotate(10deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0);
+    -webkit-transform: translate(0, 0) rotate(0);
+    -moz-transform: translate(0, 0) rotate(0);
+    -ms-transform: translate(0, 0) rotate(0);
+    -o-transform: translate(0, 0) rotate(0);
+  }
+}
+
+@keyframes caida {
+  0% {
+    top: -200px;
+  }
+  60% {
+    top: 0;
+  }
+  80% {
+    top: -20px;
+  }
+  100% {
+    top: 0;
+  }
+}

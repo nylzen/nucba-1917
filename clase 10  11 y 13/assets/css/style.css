@@ -106,6 +106,8 @@ nav {
 
 .title-img {
   width: 350px;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
 }
 
 .about__content p {
@@ -638,4 +640,40 @@ p[data-descr]:hover::after {
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
+}
+
+/* Animaciones */
+.card:nth-child(1) {
+  animation: floating 3s ease infinite alternate;
+  -webkit-animation: floating 3s ease infinite alternate;
+}
+.card:nth-child(2) {
+  animation: floating 3s 0.5s ease infinite alternate;
+  -webkit-animation: floating 3s 0.55555s ease infinite alternate;
+}
+.card:nth-child(3) {
+  animation: floating 3s 1s ease infinite alternate;
+  -webkit-animation: floating 3s 1s ease infinite alternate;
+}
+
+.cokemon {
+  animation: floating 2s ease infinite alternate;
+  -webkit-animation: floating 2s ease infinite alternate;
+}
+
+@keyframes floating {
+  from {
+    transform: translateY(20px);
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
+  }
+  to {
+    transform: translateY(-50px);
+    -webkit-transform: translateY(-50px);
+    -moz-transform: translateY(-50px);
+    -ms-transform: translateY(-50px);
+    -o-transform: translateY(-50px);
+  }
 }
