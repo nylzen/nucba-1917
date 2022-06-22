@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #131415;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  padding: 3rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+p {
+  margin-bottom: 2rem;
+  max-width: 950px;
+}
+
+ul {
+  margin-bottom: 2rem;
+  padding: 1rem 1rem;
+}
+
+a:visited,
+a {
+  color: white;
+}
+
+.btn {
+  padding: 0.5rem 0.7rem;
+  background: #ffff00;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 800;
+  color: #131415;
+}
+
+.btn:visited {
+  color: #131415;
+}
+
+h2 {
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+h3 {
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.hr {
+  border: 2px solid #ffff00;
+}
+
+.my {
+  margin: 1rem 0;
+}
+
+/*  */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+img {
+  width: 50%;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.btns {
+  padding: 20px;
+}
+
+.btns button {
+  padding: 10px 15px;
+  background: #ffff00;
+  color: #131415;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.ocultar {
+  display: none;
+}
+/* Javascript Clases */
+.show {
+  display: block;
+}
