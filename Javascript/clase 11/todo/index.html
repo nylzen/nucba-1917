@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TodoApp</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="section-container">
+      <h1>To Do List</h1>
+      <p class="subtitle">
+        Creamos un todo list guardando las tareas en el localstorage
+      </p>
+      <div class="tasks-container">
+        <div class="input-btn">
+          <input type="text" id="input" placeholder="Ingresá una tarea" />
+          <button id="addTask">Add Task</button>
+        </div>
+        <div class="list-tasks">
+          <ul id="list-container">
+            <li>Nombre de la tarea <span>X</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <script src="./main.js"></script>
+  </body>
+</html>

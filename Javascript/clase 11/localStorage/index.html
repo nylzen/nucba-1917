@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LocalStorage</title>
+  </head>
+  <body>
+    <script>
+      function saveLocalStorage() {
+        let nombre = "Nelson";
+
+        let user = {
+          nombre: "nelson",
+          email: "asd@gmail.com",
+        };
+
+        // Vamos a guardar en el localStorage
+        localStorage.setItem("nombreUsuario", nombre);
+        // Vamos a guardar el objeto
+        localStorage.setItem("pepito", JSON.stringify(user));
+      }
+      saveLocalStorage();
+
+      function getLocalStorage() {
+        if (localStorage.getItem("nombreUsuario")) {
+          let nombre = localStorage.getItem("nombreUsuario");
+          console.log(nombre);
+        } else {
+          console.log("No tenes data en el local storage");
+        }
+
+        // * Esto nos devuelve el objeto pero en un string
+        // let users = localStorage.getItem("pepito");
+        let users = JSON.parse(localStorage.getItem("pepito"));
+
+        // console.log(nombre);
+        // console.log(users);
+      }
+
+      getLocalStorage();
+    </script>
+  </body>
+</html>
