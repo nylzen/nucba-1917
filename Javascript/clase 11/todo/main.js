@@ -19,6 +19,7 @@ function addTasks() {
   if (task === "") {
     // console.log("error");
     showError("La tarea esta vacia");
+    return;
   }
 
   //   Creamos un objeto de tasks donde vamos a guardar dos valores, el task y el id. Para el id vamos a usar Date.now(), que nos muestra esto? Nos muestra todos los milisegundos que pasaron desde el 1 de enero de 1970
@@ -52,6 +53,7 @@ function createHTML() {
 
     // Lo pintamos en el html
     listTasks.appendChild(li);
+    console.log(task);
   });
 }
 
