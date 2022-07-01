@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>JS - DOM</title>
+  </head>
+  <body>
+    <main class="max-width">
+      <h1>2.13 Formularios</h1>
+      <p>
+        En esta clase vamos a aprender a como podemos validar algunos campos en
+        un formulario. Vamos a ver tambien un poco de que son las expresiones
+        regulares para hacer estas validaciones
+      </p>
+      <a href="#" class="btn" id="btn">Ver más</a>
+      <h2>Recursos de la clase:</h2>
+      <ul>
+        <li>
+          <a
+            href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions"
+            >https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://developer.mozilla.org/es/docs/Learn/Forms/Form_validation"
+            >https://developer.mozilla.org/es/docs/Learn/Forms/Form_validation</a
+          >
+        </li>
+      </ul>
+      <hr class="hr" />
+      <h3>Validacion de formularios</h3>
+
+      <div class="container">
+        <form action="" id="form">
+          <div class="form">
+            <h1>Registro</h1>
+            <div class="grupo">
+              <label for="nombre">Nombre Usuario</label>
+              <input type="text" name="nombre" id="nombre" />
+            </div>
+            <div class="grupo">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" />
+            </div>
+            <div class="grupo">
+              <label for="password">Password</label>
+              <input type="text" name="password" id="password" />
+            </div>
+            <!-- Agregamos input para confirmar pw -->
+            <div class="grupo">
+              <label for="confirmPass">Confirm Password</label>
+              <input type="password" name="password" id="confirmPass" />
+            </div>
+            <!-- Agregamos un input de telefono -->
+            <div class="grupo">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" />
+            </div>
+            <input type="submit" class="enviar" />
+            <!-- Crear un p donde voy a meter los mensajes de error -->
+            <p class="errores" id="errores"></p>
+          </div>
+        </form>
+      </div>
+
+      <!-- scripts -->
+      <script src="./main.js"></script>
+    </main>
+  </body>
+</html>
