@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #131415;
+  color: white;
+}
+
+#container__products {
+  display: flex;
+  height: 100vh;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 150px;
+}
+
+.producto {
+  background: salmon;
+  border-radius: 1rem;
+  padding: 2rem;
+}

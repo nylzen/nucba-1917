@@ -10,6 +10,25 @@ const totalProducts = document.getElementById('totalProducts');
 const btnComprar = document.querySelectorAll('.product__btn');
 // Div del carrito
 const cart = document.getElementById('cart');
+// Llamamos al navbar
+const navbar = document.getElementById('navbar');
+
+// * CLASE 15 PEDI II
+// Mostrar/Ocultar menu al scrollear
+let ultimoScrollTop;
+
+window.addEventListener('scroll', () => {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  // console.log(`el scrolltop es ${scrollTop}`);
+  // console.log(`el ultimo scroll es ${ultimoScrollTop}`);
+  if (scrollTop > ultimoScrollTop) {
+    navbar.style.top = '-100px';
+  } else {
+    navbar.style.top = '0';
+  }
+
+  ultimoScrollTop = scrollTop;
+});
 
 // Mostrar menu (toggle)
 menu.addEventListener('click', () => {
@@ -70,7 +89,7 @@ const handleAddProduct = (e) => {
       // Llamamos a la funcion que actualiza el contador
       setCount();
       //   Actualizar en el div carrito
-      products[item].price * products[item].count;
+      // products[item].price * products[item].count;
       //   Ejecutamos el total del carrito
       totalPrice();
       // Ejecutamos la funcion que pinta para que actualice el carrito

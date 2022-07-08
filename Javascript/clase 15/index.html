@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Tiendita rapida</h1>
+    <!-- Contenedor para renderizar los productos -->
+    <div id="container__products">
+      <!-- aca van los productos renderizados -->
+    </div>
+
+    <!-- Usamos el defer
+    <script defer>: el script se descarga de forma asíncrona, en paralelo con el análisis HTML, y además su ejecución es diferida hasta que termine el análisis HTML. No hay bloqueo en el renderizado HTML. La ejecución de todos los scripts diferidos se realiza en el mismo orden en el que aparecen en el documento. -->
+
+    <!-- Primero cargamos el stock -->
+    <script defer src="./stock.js"></script>
+    <!-- Despues el main -->
+    <script defer src="./main.js"></script>
+  </body>
+</html>
