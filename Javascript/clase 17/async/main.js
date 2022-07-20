@@ -23,7 +23,7 @@ const nameSelector = () => {
       // Hagamos entonces que devuelva un numero random
       let selectedName = null;
       let randomNumber = Math.floor(Math.random() * 10);
-      console.log(randomNumber);
+      // console.log(randomNumber);
       selectedName = names[randomNumber];
       //   resolve(selectedName);
 
