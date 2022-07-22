@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e63946;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 50px;
+}
+
+.pokemon-logo {
+  width: 25%;
+}
+
+.poke__container {
+  display: flex;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.poke {
+  background: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.id-poke {
+  position: absolute;
+  top: 1rem;
+  font-size: 7rem;
+  opacity: 0.1;
+  font-weight: 800;
+  z-index: 1;
+}
+
+.poke img {
+  z-index: 2;
+  width: 150px;
+}
+
+.poke__type {
+  text-transform: uppercase;
+  padding: 0.4rem 0.8rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.5rem;
+}
+
+.tipo-poke {
+  margin: 10px 0;
+  display: flex;
+  gap: 0.3rem;
+}
+
+.height,
+.weight {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #1e1e1e;
+  letter-spacing: 2px;
+}
+
+/* tipos */
+.normal {
+  background-color: #aa9;
+}
+
+.fire {
+  background-color: #f42;
+}
+
+.grass {
+  background-color: #7c5;
+}
+
+.poison {
+  background-color: #a59;
+}
+
+.water {
+  background-color: #39f;
+}
+
+.electric {
+  background-color: #fc3;
+}
+
+.ice {
+  background-color: #6cf;
+}
+
+.fighting {
+  background-color: #b54;
+}
+
+.ground {
+  background-color: #db5;
+}
+
+.flying {
+  background-color: #89f;
+}
+
+.psychic {
+  background-color: #f59;
+}
+
+.bug {
+  background-color: #ab2;
+}
+
+.rock {
+  background-color: #ba6;
+}
+
+.ghost {
+  background-color: #66b;
+}
+
+.dragon {
+  background-color: #76e;
+}
+
+.dark {
+  background-color: rgb(7, 3, 1);
+}
+
+.steel {
+  background-color: #aab;
+}
+
+.fairy {
+  background-color: #e9e;
+}
