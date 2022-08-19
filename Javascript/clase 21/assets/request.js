@@ -5,6 +5,7 @@ const requestCoins = async value => {
   const response = await fetch(baseURL);
   const json = await response.json();
   const data = json.data;
+
   // console.log(data);
   //   1er paso es traernos todas las monedas (100 en este caso)
   //   2do paso en donde pueden pasar dos cosas:
@@ -42,7 +43,7 @@ const requestCoins = async value => {
 const chunkArrayInGroups = (arr, size) => {
   // Creamos un arr vacio donde vamos a guardar cada grupo
   let chunk = [];
-  //   Iniciamos en 0, el length del arr equivale a los 100 que trae la api y el i + size va a ser el loop que recorre el arr
+  //   Iniciamos en 0, el length del arr equivale a los 100 que trae la api y el i += size va a ser el loop que recorre el arr
   for (let i = 0; i < arr.length; i += size) {
     // Pusheamos al arr el tramo de el indice del loop (i) hasta el valor size + el indicador (i)
     // Acuerdense que el slice trae de un principio a un final no incluido, por eso tenemos que sumar
