@@ -32,8 +32,8 @@ html {
   display: none;
 }
 
-/*Toggle para el overlay (para que funcione unicamente cuando abrimos carrito o menu hamburguesa.
-  Aclarar que funciona porque son elementos hermanos y overlay esta debajo de los dos inputs en el código.*/
+/*Toggle para el overlay (para que funcione unicamente cuando abrimos carrito o menu hamburguesa
+  .*/
 .show-overlay {
   display: block;
 }
@@ -45,7 +45,7 @@ html {
 }
 
 .navbar-list li a::after {
-  content: "";
+  content: '';
   height: 2px;
   width: 100%;
   background: var(--text-white);
@@ -63,7 +63,7 @@ html {
 }
 
 /*CARRITO */
-/*Despues de cambiar el carrito en el html y en styles.css , aplicamos una animación en hover*/
+
 .cart-icon {
   transition: all 0.2s ease-out;
 }
@@ -241,7 +241,7 @@ html {
 /*Creamos y posicionamos el before y el after. Recordar que sin la propiedad content el before y after no funcionan*/
 .hero-info h1 span::before,
 .hero-info h1 span::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   right: 0;
