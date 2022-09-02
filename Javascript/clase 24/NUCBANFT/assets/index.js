@@ -15,6 +15,8 @@ const btnLoad = document.querySelector('.btn-load');
 const buyBtn = document.querySelector('.btn-buy');
 // Boton para abrir y cerrar el menu
 const barsBtn = document.querySelector('.menu-label');
+// Boton para abrir y cerrar el carrito
+const cartBtn = document.querySelector('.cart-label');
 // Carrito
 const cartMenu = document.querySelector('.cart');
 // Menu Hamburguesa
@@ -134,11 +136,177 @@ const showMore = () => {
   }
 };
 
+/// --------- Logica para el carro ---------------------- //
+// Renderizado del producto del carrito
+const renderCartProduct = cartProduct => {
+  const { id, name, bid, img, quantity } = cartProduct;
+  return `
+  <div class="cart-item">
+    <img src="${img}" alt="NFt del carro" />
+    <div class="item-info">
+      <h3 class="item-title">${name}</h3>
+      <p class="item-bid">Current Bid</p>
+      <span class="item-price">${bid}</span>
+    </div>
+    <div class="item-handler">
+      <span class="quantity-handler down" data-id=${id}>-</span>
+      <span class="item-quantity">${quantity}</span>
+      <span class="quantity-handler up" data-id=${id}>+</span>
+    </div>
+  </div>
+  `;
+};
+
+// Logica para renderizar el carro
+const renderCart = cartList => {
+  if (!cartList.length) {
+    productsCart.innerHTML = `<p class="empty-msg">No hay productos en el carrito</p>`;
+    return;
+  }
+  productsCart.innerHTML = cartList.map(renderCartProduct).join('');
+};
+
+// Funcion para renderizar el total de la suma del precio de todo lo que esta en el carrito. Limitamos los decimales a 2
+// Por cada iteracion multiplicar el precio por la cantidad del producto que hay en el carrito y lo suma al acumulado
+const showTotal = cartList => {
+  total.innerHTML = `${cartList
+    .reduce((acc, cur) => acc + Number(cur.bid) * cur.quantity, 0)
+    .toFixed(2)} ETH`;
+};
+
+// Si no hay nada en el carro, deshabilita el boton de compra, si no lo habilita
+const disableBuyBtn = () => {
+  if (!cart.length) {
+    buyBtn.classList.add('disabled');
+  } else {
+    buyBtn.classList.remove('disabled');
+  }
+};
+
+// Funcion para el manejo de mas y menos dentro del carrito
+const handleQuantity = e => {
+  if (e.target.classList.contains('down')) {
+    const existingCartItem = cart.find(item => item.id === e.target.dataset.id);
+
+    // Si tocamos en un item que tine una sola cantidad
+    if (existingCartItem.quantity === 1) {
+      if (window.confirm('¿Desea Eliminar el producto del carrito?')) {
+        cart = cart.filter(prod => prod.id !== existingCartItem.id);
+        saveLocalStorage(cart);
+        renderCart(cart);
+        showTotal(cart);
+        disableBuyBtn();
+        return;
+      }
+      // Si no
+    }
+    cart = cart.map(item => {
+      return item.id === existingCartItem.id
+        ? { ...item, quantity: Number(item.quantity) - 1 }
+        : item;
+    });
+
+    // Si se toco el boton de up
+  } else if (e.target.classList.contains('up')) {
+    const existingCartItem = cart.find(item => item.id === e.target.dataset.id);
+
+    cart = cart.map(item => {
+      return item.id === existingCartItem.id
+        ? { ...item, quantity: Number(item.quantity) + 1 }
+        : item;
+    });
+  }
+  // Para todos los casos
+  saveLocalStorage(cart);
+  renderCart(cart);
+  showTotal(cart);
+  disableBuyBtn();
+};
+
+const addProduct = e => {
+  if (!e.target.classList.contains('btn-add')) return;
+  const product = {
+    id: e.target.dataset.id,
+    name: e.target.dataset.name,
+    bid: e.target.dataset.bid,
+    img: e.target.dataset.img,
+  };
+
+  // Vamos a hacer una variable para checkear si el producto existe en el carrito, si existe vamos a sumar + 1 a la cantidad
+  //
+  const existingCartItem = cart.find(item => item.id === product.id);
+
+  if (existingCartItem) {
+    cart = cart.map(item => {
+      return item.id === product.id
+        ? { ...item, quantity: Number(item.quantity) + 1 }
+        : item;
+    });
+  } else {
+    cart = [...cart, { ...product, quantity: 1 }];
+  }
+  saveLocalStorage(cart);
+  renderCart(cart);
+  showTotal(cart);
+  disableBuyBtn();
+};
+
+// Si el carrito esta vacio, apretar el boton de compra no va  a hacer nada, sino triggerea a una nueva ventana de confirmacion en caso de confirmar, sacamos del localstorage el item cart y recargamos la pagina
+const completeBuy = () => {
+  if (!cart.length) return;
+  if (window.confirm('¿Desea finalizar su compra?')) {
+    localStorage.removeItem('cart');
+    window.location.reload();
+  }
+};
+
+// ----------------------Menu Interface ---------------//
+
+const toggleMenu = () => {
+  barsMenu.classList.toggle('open-menu');
+  if (cartMenu.classList.contains('open-cart')) {
+    cartMenu.classList.remove('open-cart');
+    return;
+  }
+  overlay.classList.toggle('show-overlay');
+};
+
+const toggleCart = () => {
+  cartMenu.classList.toggle('open-cart');
+  if (barsMenu.classList.contains('open-menu')) {
+    barsMenu.classList.remove('open-menu');
+    return;
+  }
+  overlay.classList.toggle('show-overlay');
+};
+
+//
+const closeOnScroll = () => {
+  if (
+    !barsMenu.classList.contains('open-menu') &&
+    !cartMenu.classList.contains('open-cart')
+  )
+    return;
+
+  barsMenu.classList.remove('open-menu');
+  cartMenu.classList.remove('open-cart');
+  overlay.classList.remove('show-overlay');
+};
+
 // Funcion para tener todos los eventos
 const init = () => {
   document.addEventListener('DOMContentLoaded', renderProducts('todas', 0));
+  document.addEventListener('DOMContentLoaded', renderCart(cart));
+  document.addEventListener('DOMContentLoaded', showTotal(cart));
   categories.addEventListener('click', filterProducts);
+  products.addEventListener('click', addProduct);
+  productsCart.addEventListener('click', handleQuantity);
   btnLoad.addEventListener('click', showMore);
+  buyBtn.addEventListener('click', completeBuy);
+  cartBtn.addEventListener('click', toggleCart);
+  barsBtn.addEventListener('click', toggleMenu);
+  disableBuyBtn();
+  window.addEventListener('scroll', closeOnScroll);
 };
 
 init();
