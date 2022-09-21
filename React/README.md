@@ -1,4 +1,4 @@
-# Clase 2 - React
+# Clases React
 
 Atentos a los siguientes puntos
 
