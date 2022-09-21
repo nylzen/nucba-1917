@@ -1,0 +1,9 @@
+div {
+  background-color: #131415;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 20px;
+}

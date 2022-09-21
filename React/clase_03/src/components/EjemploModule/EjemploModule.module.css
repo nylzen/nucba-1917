@@ -1,0 +1,11 @@
+.contenedorModule {
+  width: 30%;
+  height: fit-content;
+  border: 1px dashed crimson;
+  border-radius: 10px;
+}
+
+.parrafoModule {
+  font-size: 1.5rem;
+  color: #4747ff;
+}
