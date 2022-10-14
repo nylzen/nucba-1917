@@ -7,8 +7,11 @@ import Separador from '../separador/Separador';
 import { LinkItem } from '../linkItem/LinkItem';
 
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import AuthContext from '../../context/AuthContext';
 
 function Navbar() {
+  const { isAuth, user } = useContext(AuthContext);
   const navigate = useNavigate();
   return (
     <NavbarContainerStyled>
@@ -24,6 +27,9 @@ function Navbar() {
         {/* <h3>Holis, Aca van los link a las rutas</h3> */}
         <LinkItem to='product'>Productos</LinkItem>
         <LinkItem to='contacto'>Contacto</LinkItem>
+        <LinkItem to={isAuth ? `/usuario/${user}` : 'login'}>
+          {isAuth ? 'Perfil' : 'Login'}
+        </LinkItem>
 
         <Separador />
       </NavbarStyled>

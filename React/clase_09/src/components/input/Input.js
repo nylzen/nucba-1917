@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { InputContainerStyled, InputStyled } from './InputStyles';
+import AuthContext from '../../context/AuthContext';
 
 function Input(props) {
+  const { handleChange } = useContext(AuthContext);
+
   return (
     <InputContainerStyled>
-      <InputStyled {...props} />
+      <InputStyled {...props} onChange={e => handleChange(e)} />
     </InputContainerStyled>
   );
 }
