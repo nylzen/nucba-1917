@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 import {
   BandPhotoContainerStyled,
   BandPhotoImageStyled,
-} from './BandPhotoStyles';
+} from "./BandPhotoStyles";
 
 const BandPhoto = ({ img, alt }) => {
   return (
