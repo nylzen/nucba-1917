@@ -39,3 +39,9 @@ export const LinkStyled = styled(Link)`
   text-decoration: none;
   color: white;
 `;
+
+export const ButtonsContainerStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`;

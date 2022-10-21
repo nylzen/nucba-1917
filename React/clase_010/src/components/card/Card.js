@@ -10,6 +10,7 @@ import {
   CardDescriptionStyled,
   CardTitleStyled,
   LinkStyled,
+  ButtonsContainerStyled,
 } from './CardStyles';
 import { useLocation } from 'react-router-dom';
 
@@ -36,7 +37,11 @@ const Card = props => {
         </CardDescriptionStyled>
       </CardContentContainerStyled>
 
-      <BandButton genre={genre} />
+      <ButtonsContainerStyled>
+        <BandButton genre={genre} />
+        {pathname.match(/bands/i) && <BandButton id={id} deleteButton />}
+      </ButtonsContainerStyled>
+
       {!pathname.match(/bands/i) && <CardFooter lastSong={lastSong} />}
     </CardContainerStyled>
   );
