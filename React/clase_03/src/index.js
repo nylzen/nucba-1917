@@ -10,8 +10,8 @@ import AppChakra from './components/AppChakra/AppChakra';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ChakraProvider>
-    {/* <App /> */}
-    <AppChakra />
+    <App />
+    {/* <AppChakra /> */}
   </ChakraProvider>
 );
 
