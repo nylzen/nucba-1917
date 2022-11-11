@@ -11,13 +11,23 @@ import {
   ProductosWrapper,
   RecomendadosWrapper,
 } from './HomeStyles';
+import { useRef } from 'react';
 
 function Home() {
+  const productsRef = useRef();
+
+  const doScroll = () => {
+    window.scrollTo(
+      productsRef.current.getBoundingClientRect().x,
+      productsRef.current.getBoundingClientRect().y
+    );
+  };
+
   return (
     <HomeWrapper>
       {/* Hero Section */}
 
-      <Hero />
+      <Hero doScroll={doScroll} />
 
       {/* Recomendados Section */}
       <RecomendadosWrapper>
@@ -32,7 +42,7 @@ function Home() {
       </CategoriasWrapper>
 
       {/* Populares Section*/}
-      <ProductosWrapper>
+      <ProductosWrapper ref={productsRef}>
         <h2>Nuestros productos</h2>
         <CardsProductos />
       </ProductosWrapper>
