@@ -1,9 +1,15 @@
 import React from 'react';
 import { Formik } from 'formik';
 import { Link } from 'react-router-dom';
-
+import { loginInitialValues, loginValidationSchema } from '../../formik';
 import LoginInput from '../../components/UI/LoginInput/LoginInput';
 import Submit from '../../components/UI/Submit/Submit';
+import {
+  signInUser,
+  signInWithGoogle,
+  createUserProfileDocument,
+} from '../../firebase/firebase-utils';
+import useRedirect from '../../hooks/useRedirect';
 
 import {
   Form,
@@ -14,23 +20,37 @@ import {
 } from './LoginStyles';
 
 const Login = () => {
+  useRedirect('/');
   return (
     <LoginContainerStyled>
       <h1>Iniciar Sesión</h1>
-      <Formik>
+      <Formik
+        initialValues={loginInitialValues}
+        validationSchema={loginValidationSchema}
+        onSubmit={async values => {
+          try {
+            const { user } = await signInUser(values.email, values.password);
+            createUserProfileDocument(user);
+          } catch (error) {
+            if (error.code === 'auth/wrong-password') {
+              alert('Contraseña incorrecta');
+            }
+            if (error.code === 'auth/user-not-found') {
+              alert('Usuario no encontrado');
+            }
+          }
+        }}
+      >
         <Form>
-          <LoginInput type='text' placeholder='Email' />
-          <LoginInput type='password' placeholder='Password' />
+          <LoginInput name='email' type='text' placeholder='Email' />
+          <LoginInput name='password' type='password' placeholder='Password' />
           <Link to='/forgot-password'>
             <LoginPasswordStyled>
               ¿Olvidaste la contraseña? Reestablecela
             </LoginPasswordStyled>
           </Link>
           <p>O podés ingresar con</p>
-          <LoginButtonGoogleStyled
-            type='button'
-            onClick={e => e.preventDefault()}
-          >
+          <LoginButtonGoogleStyled type='button' onClick={signInWithGoogle}>
             <img
               src='https://res.cloudinary.com/dcatzxqqf/image/upload/v1656648432/coding/NucbaZappi/Assets/google-icon_jgdcr1.png'
               alt='Google logo'
@@ -40,9 +60,7 @@ const Login = () => {
           <Link to='/register'>
             <LoginEmailStyled>¿No tenes cuenta? Crea una</LoginEmailStyled>
           </Link>
-          <Submit type='button' onClick={e => e.preventDefault()}>
-            Ingresar
-          </Submit>
+          <Submit>Ingresar</Submit>
         </Form>
       </Formik>
     </LoginContainerStyled>

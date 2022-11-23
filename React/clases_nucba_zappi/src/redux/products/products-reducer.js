@@ -5,8 +5,6 @@ const INITIAL_STATE = {
   totalProducts: TotalProducts,
 };
 
-console.log(Products);
-
 const productsReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     default:

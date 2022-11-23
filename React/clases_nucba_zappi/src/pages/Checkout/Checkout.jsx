@@ -15,7 +15,11 @@ const Checkout = () => {
   return (
     <div>
       <ContainerCheckoutStyled>
-        <CheckoutForm />
+        <CheckoutForm
+          cartItems={cartItems}
+          shippingCost={shippingCost}
+          price={price}
+        />
         <ProductsCheckout
           cartItems={cartItems}
           shippingCost={shippingCost}
