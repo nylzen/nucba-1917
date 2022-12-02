@@ -8,11 +8,12 @@ import productsReducer from './products/products-reducer';
 import recommendedReducer from './recommended/recommended-reducer';
 import cartReducer from './cart/cart-reducer';
 import userReducer from './user/user-reducer';
+import ordersReducer from './orders/orders-reducer';
 
 const persistConfig = {
   key: 'root',
   storage: storage,
-  whitelist: ['cart'],
+  whitelist: ['cart', 'user'],
 };
 
 const rootReducer = combineReducers({
@@ -22,6 +23,7 @@ const rootReducer = combineReducers({
   recommended: recommendedReducer,
   cart: cartReducer,
   user: userReducer,
+  orders: ordersReducer,
 });
 
 export default persistReducer(persistConfig, rootReducer);
