@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { Button, TextSpan } from '../globalComponents/GlobalComponents';
 import {
   HeroImage,
@@ -9,10 +9,10 @@ import {
   HeroTitle,
 } from './HeroStyles';
 
-const Hero = () => {
+const Hero = forwardRef((props, ref) => {
   return (
     <>
-      <HeroSection>
+      <HeroSection ref={ref}>
         <HeroSlogan>
           <HeroTextContainer>
             <HeroTitle>
@@ -29,6 +29,6 @@ const Hero = () => {
       </HeroSection>
     </>
   );
-};
+});
 
 export default Hero;

@@ -4,6 +4,11 @@ import { Section } from '../globalComponents/GlobalComponents';
 export const AboutSection = styled(Section)`
   flex-wrap: wrap;
   justify-content: space-around;
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 `;
 
 export const AboutImage = styled.div`
@@ -22,6 +27,11 @@ export const AboutContent = styled.div`
   flex-direction: column;
   gap: 20px;
   justify-content: center;
+
+  @media (max-width: 992px) {
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 export const AboutCardsContainer = styled.div`

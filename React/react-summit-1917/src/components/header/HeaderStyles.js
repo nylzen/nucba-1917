@@ -12,6 +12,10 @@ export const StyledHeader = styled.header`
   z-index: 2;
   background-color: var(--black);
   background-image: var(--bg-img);
+
+  @media (max-width: 992px) {
+    padding: 0 50px 0 10px;
+  }
 `;
 
 export const Logo = styled.img`
@@ -22,12 +26,32 @@ export const Navbar = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 992px) {
+    position: absolute;
+    background-color: var(--black);
+    background-image: var(--bg-img);
+    flex-direction: column;
+    top: 100px;
+    right: 0;
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    z-index: 5;
+    transition: 0.4s all ease-in-out;
+    transform: ${props =>
+      props.isOpen ? 'translateX(0)' : 'translateX(200%)'};
+  }
 `;
 
 export const NavbarList = styled.ul`
   display: flex;
   align-items: center;
   gap: 50px;
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+  }
 `;
 
 export const NavbarItem = styled.li`

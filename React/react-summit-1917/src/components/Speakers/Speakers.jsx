@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import shortid from 'shortid';
 import { speakers } from '../../utils/data';
 import { Button, SectionTitle } from '../globalComponents/GlobalComponents';
@@ -9,10 +9,10 @@ import {
   TitleContainer,
 } from './SpeakersStyles';
 
-const Speakers = () => {
+const Speakers = forwardRef((props, ref) => {
   return (
     <>
-      <SpeakersSection>
+      <SpeakersSection ref={ref}>
         <TitleContainer>
           <SectionTitle>Speakers</SectionTitle>
           <Button>Sumarme</Button>
@@ -25,6 +25,6 @@ const Speakers = () => {
       </SpeakersSection>
     </>
   );
-};
+});
 
 export default Speakers;

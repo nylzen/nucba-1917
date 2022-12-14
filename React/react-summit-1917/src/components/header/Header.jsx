@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { MenuContext } from '../../context/Context';
+import BarsMenu from '../barsMenu/BarsMenu';
 import {
   LastNavbarItem,
   Logo,
@@ -8,19 +10,32 @@ import {
   StyledHeader,
 } from './HeaderStyles';
 
-const Header = () => {
+const Header = ({ refs }) => {
+  const ctx = useContext(MenuContext);
+  const { aboutUsRef, heroRef, lineupRef, speakersRef } = refs;
+
+  const scrollTo = ref => {
+    ref.current.scrollIntoView();
+    ctx.toggleMenu();
+  };
+
   return (
     <>
       <StyledHeader>
         <Logo src='images/logo.png' alt='Logo de Nucba' />
-        <Navbar>
+        <Navbar isOpen={ctx.isMenuOpen}>
           <NavbarList>
-            <NavbarItem>Inicio</NavbarItem>
-            <NavbarItem>Nosotros</NavbarItem>
-            <NavbarItem>Line-up</NavbarItem>
-            <LastNavbarItem>Speakers</LastNavbarItem>
+            <NavbarItem onClick={() => scrollTo(heroRef)}>Inicio</NavbarItem>
+            <NavbarItem onClick={() => scrollTo(aboutUsRef)}>
+              Nosotros
+            </NavbarItem>
+            <NavbarItem onClick={() => scrollTo(lineupRef)}>Line-up</NavbarItem>
+            <LastNavbarItem onClick={() => scrollTo(speakersRef)}>
+              Speakers
+            </LastNavbarItem>
           </NavbarList>
         </Navbar>
+        <BarsMenu />
       </StyledHeader>
     </>
   );

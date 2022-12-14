@@ -12,6 +12,10 @@ export const TitleContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   width: 100%;
+  @media (max-width: 576px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 `;
 
 export const SpeakersCardsContainer = styled.div`
@@ -21,4 +25,7 @@ export const SpeakersCardsContainer = styled.div`
   flex-wrap: wrap;
   width: 90%;
   gap: 90px;
+  @media (max-width: 576px) {
+    width: 100%;
+  }
 `;

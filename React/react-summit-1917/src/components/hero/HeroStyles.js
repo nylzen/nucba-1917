@@ -12,10 +12,24 @@ export const HeroSlogan = styled.div`
   flex-direction: column;
   gap: 30px;
   max-width: 500px;
+
+  @media (max-width: 992px) {
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  }
 `;
 
 export const HeroTextContainer = styled.div`
   max-width: max(60%, 500px);
+
+  @media (max-width: 992px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 export const HeroTitle = styled.h1`
@@ -33,4 +47,8 @@ export const HeroParagraph = styled.p`
 export const HeroImage = styled.img`
   height: 400px;
   margin-bottom: 20px;
+
+  @media (max-width: 992px) {
+    display: none;
+  }
 `;

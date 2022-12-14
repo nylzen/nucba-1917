@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import {
   SectionParagraph,
   SectionTitle,
@@ -12,10 +12,10 @@ import {
   AboutSection,
 } from './AboutUsStyles';
 
-const AboutUs = () => {
+const AboutUs = forwardRef((props, ref) => {
   return (
     <>
-      <AboutSection>
+      <AboutSection ref={ref}>
         <AboutImage />
         <AboutContent>
           <SectionTitle>
@@ -41,6 +41,6 @@ const AboutUs = () => {
       </AboutSection>
     </>
   );
-};
+});
 
 export default AboutUs;
